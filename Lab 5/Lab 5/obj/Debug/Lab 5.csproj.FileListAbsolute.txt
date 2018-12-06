@@ -1,0 +1,6 @@
+D:\3 year\sharp\Lab 5\Lab 5\bin\Debug\Lab 5.exe.config
+D:\3 year\sharp\Lab 5\Lab 5\bin\Debug\Lab 5.exe
+D:\3 year\sharp\Lab 5\Lab 5\bin\Debug\Lab 5.pdb
+D:\3 year\sharp\Lab 5\Lab 5\obj\Debug\Lab 5.csprojResolveAssemblyReference.cache
+D:\3 year\sharp\Lab 5\Lab 5\obj\Debug\Lab 5.exe
+D:\3 year\sharp\Lab 5\Lab 5\obj\Debug\Lab 5.pdb
