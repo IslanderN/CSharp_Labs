@@ -14,71 +14,13 @@ namespace Lab_5
         static DBworker db = new DBworker();
         static void Main(string[] args)
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["LibraryConnection"].ConnectionString;
-            //string sql = "SELECT * FROM Library";
-            //using (SqlConnection connection = new SqlConnection(connectionString))
-            //{
-            //    connection.Open();
-            //    // Создаем объект DataAdapter
-            //    SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-            //    // Создаем объект Dataset
-            //    DataSet ds = new DataSet();
-            //    // Заполняем Dataset
-            //    //adapter.Fill(ds);
-
-            //    foreach(DataColumn column in ds.Tables[1].Columns)
-            //    {
-            //        Console.Write("\t{0}", column.ColumnName);
-            //    }
-            //    Console.WriteLine();
-            //    foreach(DataRow dr in ds.Tables)
-            //    {
-            //        var cells = dr.ItemArray;
-            //        foreach(object cell in cells)
-            //        {
-            //            Console.Write("\t{0}", cell);
-            //        }
-            //        Console.WriteLine();
-            //    }
-            //}
-
-            //Console.WriteLine("Подключение закрыто...");
-
-
-            //bool b = db.Add(3, "Замовлення книги, 20");
-            //if (b)
-            //{
-            //    Console.WriteLine("Succes");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Failed");
-            //}
-            //db.Show(3);
-            //if(!db.Delete(3, 0))
-            //{
-            //    Console.WriteLine("Delete failed");
-            //}
-            //if(db.Edit(3,0,"Замовлення журналу, 10"))
-            //{
-            //    Console.WriteLine("Edit success");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Edit failed");
-            //}
-            //db.Show(3);
-
             GlobalMenu();
 
             Console.Read();
         }
 
 
-        private static void Menu()
-        {
 
-        }
 
         private static void GlobalMenu()
         {
@@ -118,7 +60,6 @@ namespace Lab_5
                 }
                 else
                 {
-                    //Console.WriteLine(index);
 
                     TableMenu(index - 1);
                     Console.Clear();
@@ -184,7 +125,6 @@ namespace Lab_5
                         case 4:
                             {
                                 repeat = false;
-                                //GlobalMenu();
                                 break;
                             }
                         default:

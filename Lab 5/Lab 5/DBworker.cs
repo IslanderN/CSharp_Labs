@@ -19,56 +19,14 @@ namespace Lab_5
         SqlDataAdapter adapter = new SqlDataAdapter();
 
         public string[] Tables { get; private set; } = new string[] { "Library", "Publication", "Reference_Room", "Service" };
-
-        //public DBworker()
-        //{
-        //    //ds.ta
-        //}
+        
 
 
         public bool Add(int tableNum, string row)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                ////???
                 connection.Open();
-
-
-                //adapter.SelectCommand = new SqlCommand(GetSQL(tableNum), connection);
-                //adapter.Fill(ds);
-
-                //DataTable dt = ds.Tables[0];
-
-                //string[] rowData = Spliting(row);
-                //if (rowData == null)
-                //{
-                //    return false;
-                //}
-
-                //DataRow newRow = dt.NewRow();
-                //for (int i = 0; i < rowData.Length; i++)
-                //{
-                //    //newRow[i].GetType().
-
-                //    TypeConverter converter = TypeDescriptor.GetConverter(newRow[i].GetType());
-                //    if (converter.CanConvertFrom(typeof(string)))
-                //    {
-                //        newRow[i] = converter.ConvertFromString(rowData[i]);
-                //    }
-                //    else
-                //    {
-                //        Console.WriteLine("Cannot convert {0}", newRow[i].GetType());
-                //        return false;
-                //    }
-
-                //}
-                //dt.Rows.Add(newRow);
-
-                //SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter);
-                //adapter.Update(ds);
-
-
-                //return true;
 
                 adapter.SelectCommand = new SqlCommand(GetSQL(tableNum), connection);
                 adapter.Fill(ds);
@@ -163,16 +121,13 @@ namespace Lab_5
             {
                 return null;
             }
-
-            //DataTable dt = ds.Tables[0];
-            //DataRow newRow = dt.NewRow();
+            
 
             newRow["address"] = address;
             newRow["all_exemplar_number"] = allExemplar;
             newRow["available_exemplar_number"] = avaliableExemplar;
             newRow["abonnement_exemplar_number"] = abonnementExemplar;
-
-            //dt.Rows.Add(newRow);
+            
 
             return newRow;
 
@@ -199,15 +154,12 @@ namespace Lab_5
             {
                 return null;
             }
-
-            //DataTable dt = ds.Tables[0];
-            //DataRow newRow = dt.NewRow();
+            
 
             newRow["Name"] = name;
             newRow["Price"] = price;
             newRow["Library_ID"] = libraryId;
-
-            //dt.Rows.Add(newRow);
+            
 
             return newRow;
         }
@@ -232,15 +184,12 @@ namespace Lab_5
             {
                 return null;
             }
-
-            //DataTable dt = ds.Tables[0];
-            //DataRow newRow = dt.NewRow();
+            
 
             newRow["Seating_Capacity"] = seatingCapacity;
             newRow["exemplar_number"] = exemplarNumber;
             newRow["Library_ID"] = libraryId;
-
-            //dt.Rows.Add(newRow);
+            
             return newRow;
         }
 
@@ -260,38 +209,15 @@ namespace Lab_5
             {
                 return null;
             }
-
-            //DataTable dt = ds.Tables[0];
-            //DataRow newRow = dt.NewRow();
-
+            
 
             newRow["Name"] = name;
             newRow["Price"] = price;
-
-            //dt.Rows.Add(newRow);
+            
             return newRow;
         }
 
-        //private string[] Spliting(string row)
-        //{
-        //    string[] split = row.Split(',');
-        //    if (split.Length != ds.Tables[0].Columns.Count - 1)
-        //    {
-        //        Console.WriteLine($"{split.Length} != {ds.Tables[0].Columns.Count}");
-        //        return null;
-        //    }
-
-        //    //for(int i =0;i < ds.Tables[0].Columns.Count; i++)
-        //    //{
-        //    //    var column = ds.Tables[0].Columns[i];
-        //    //    if(split[i].GetType() != column.)
-        //    //    {
-        //    //        Console.WriteLine($"{split[i].GetType()} != {column.GetType()}");
-        //    //        return null;
-        //    //    }
-        //    //}
-        //    return split;
-        //}
+        
 
 
 
@@ -358,14 +284,11 @@ namespace Lab_5
 
                     return false;
                 }
-
-                //dt.Rows.Remove();
+                
                 dt.Rows[rowIndex].Delete();
 
                 SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter);
                 adapter.Update(ds);
-
-                //ds.AcceptChanges();
             }
 
 
@@ -391,8 +314,7 @@ namespace Lab_5
                     }
                     return false;
                 }
-
-                //DataTable dt = ds.Tables[0];
+                
                 DataRow editRow = ds.Tables[0].Rows[rowIndex];
 
                 switch (tableNum)
