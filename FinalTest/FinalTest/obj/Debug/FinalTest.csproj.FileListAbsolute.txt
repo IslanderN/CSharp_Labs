@@ -1,0 +1,6 @@
+D:\3 year\sharp\FinalTest\FinalTest\bin\Debug\FinalTest.exe.config
+D:\3 year\sharp\FinalTest\FinalTest\bin\Debug\FinalTest.exe
+D:\3 year\sharp\FinalTest\FinalTest\bin\Debug\FinalTest.pdb
+D:\3 year\sharp\FinalTest\FinalTest\obj\Debug\FinalTest.csprojResolveAssemblyReference.cache
+D:\3 year\sharp\FinalTest\FinalTest\obj\Debug\FinalTest.exe
+D:\3 year\sharp\FinalTest\FinalTest\obj\Debug\FinalTest.pdb
